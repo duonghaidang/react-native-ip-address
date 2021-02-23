@@ -9,6 +9,8 @@ import com.facebook.react.bridge.Callback;
 import java.net.InetAddress;
 import java.net.NetworkInterface;
 import java.util.Enumeration;
+import com.facebook.react.bridge.Promise;
+
 
 public class RNReactNativeIpAddressModule extends ReactContextBaseJavaModule {
 
@@ -36,11 +38,6 @@ public class RNReactNativeIpAddressModule extends ReactContextBaseJavaModule {
         } catch (Exception ex) {
             promise.reject("Error", ex);
         }
-    }
-
-    @ReactMethod
-    public void toastNative(String text){
-        Toast.makeText(reactContext, text, Toast.LENGTH_LONG).show();
     }
 
   @Override
